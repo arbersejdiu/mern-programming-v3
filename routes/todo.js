@@ -1,10 +1,10 @@
 const router = require("express").Router();
 const Todo = require("../models/Todo");
+
+// Create New Todo
 router.post("/add/todo", (req, res) => {
   const { todo } = req.body;
-
   const newTodo = new Todo({ todo });
-
   newTodo
     .save()
     .then(() => {
