@@ -13,7 +13,7 @@ router.post("/add/todo", (req, res) => {
     .catch(err => consoel.log(err));
   res.redirect("/");
 });
-
+// Delete todo
 router.get("/delete/todo/:_id", (req, res) => {
   const { _id } = req.params;
   Todo.deleteOne({ _id })
